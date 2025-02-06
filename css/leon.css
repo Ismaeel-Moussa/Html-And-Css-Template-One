@@ -27,6 +27,29 @@ body {
   padding-right: 15px;
 }
 
+#button-up {
+  padding: 7px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  font-size: 20px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 4px;
+  display: none;
+  z-index: 1;
+}
+#button-up::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 17px;
+  border-color: transparent transparent var(--main-color) transparent;
+  right: 3px;
+  top: -33px;
+}
+
 /* Small */
 @media (min-width: 768px) {
   .container {
@@ -133,9 +156,10 @@ body {
   z-index: 1;
 }
 
-.header .links:hover ul {
+/* done in js */
+/* .header .links:hover ul {
   display: block;
-}
+} */
 
 .header .links ul::before {
   content: "";
